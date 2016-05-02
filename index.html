@@ -48,8 +48,84 @@
 
 <div class="container-fluid starter-template">
 	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<p class="lead">Rellene el siguiente formulario para dar de alta los datos del restaurante en nuestra base
+				de datos</p>
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12index.html">
-			<h1>Inicio</h1>
+			<form class="form-horizontal">
+				<fieldset>
+
+					<!-- Form Name -->
+					<legend>ALTA RESTAURANTE</legend>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="name">Nombre Restaurante</label>
+						<div class="col-xs-8">
+							<input id="name" name="name" placeholder="nombre..." class="form-control input-md"
+							       required="" type="text">
+
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="telephone">Teléfono</label>
+						<div class="col-xs-8">
+							<input id="telephone" name="telephone" placeholder="telefóno..."
+							       class="form-control input-md" required="" type="text">
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="email">Email</label>
+						<div class="col-xs-8">
+							<input id="email" name="email" placeholder="email..." class="form-control input-md"
+							       required="" type="text">
+
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="address">Dirección</label>
+						<div class="col-xs-8">
+							<input id="address" name="address" placeholder="dirección..." class="form-control input-md"
+							       required="" type="text">
+
+						</div>
+					</div>
+
+					<!-- File Button -->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="image">Imagen</label>
+						<div class="col-xs-8">
+							<input id="image" name="image" class="input-file" type="file">
+						</div>
+					</div>
+
+					<!-- Button -->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="btnEnviar"></label>
+						<div class="col-xs-2">
+							<button type="submit" id="btnEnviar" name="btnEnviar" class="btn btn-info">Enviar</button>
+						</div>
+					</div>
+
+				</fieldset>
+			</form>
+
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="map">
+
 		</div>
 	</div>
 

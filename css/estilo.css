@@ -1,3 +1,7 @@
 .starter-template {
     padding-top: 70px;
 }
+
+#map {
+    height: 500px;
+}

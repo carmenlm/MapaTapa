@@ -6,6 +6,9 @@ var directionsService = new google.maps.DirectionsService();
 var directionsDisplay;
 var mapa;
 
+//TODO poner tapas
+//TODO poner imagenes uy videos al info
+
 /**
  * funcion iniciar mapa
  */
@@ -57,16 +60,66 @@ function initialize() {
             nombre: name,
             telefono: phone,
             email: email,
-            direccion: address
-        }
+            direccion: address,
+            tapas: []
+        };
 
         //añado el objeto al array
         places.push(restaurante);
+        console.log(places);
 
         // console.log(places);
         //y calculo la ruta
         calcRoute(directionsDisplay, directionsService, markers, infoWindow, mapa);
 
+        //creo el select con los restaurantes en el formulario de las tapas
+
+        //capturo el select
+        var select = document.getElementById('numRestaurante');
+
+        //reseteo el select de los options
+        select.innerHTML = "";
+
+        //itero por cada places y añado un option para cada restaurante
+        for (var i = 0; i < places.length; i++) {
+            var opt = document.createElement('option');
+            opt.value = i;
+            opt.innerHTML = i;
+            select.appendChild(opt);
+
+        }
+
+
+    };
+
+    //boton para añadir las tapas
+    var btnTapa = document.getElementById('btnTapa');
+
+
+    btnTapa.onclick = function () {
+
+        var puntoSeleccionado;
+
+        //capturo los datos de la tapa
+        var id = document.getElementById('numRestaurante').value;
+        var nombreTapa = document.getElementById('nameTapa').value;
+        /* var punto = document.getElementsByName('rate');
+         for (var i = 0; i < punto.length; i++) {
+         if (punto[i].checked) {
+         puntoSeleccionado = punto[i].value;
+         }
+
+         }
+
+         console.log(puntoSeleccionado);*/
+
+
+        //creo un ob literal tapa
+        var tapa = {
+            nombre: nombreTapa
+        };
+
+        places[id].tapas.push(tapa);
 
     };
 
@@ -172,6 +225,13 @@ function mostrarPasos(response, markers, stepDisplay, map) {
             "</small></h3><h3>Dirección: <small>" +
             places[i].direccion +
             "</small></h3>";
+
+        //TODO controlar cuando se añade una tapa
+       /* for (var j = 0; j < places[i][4].length; j++) {
+            var obj = places[j];
+            console.log(obj);
+
+        }*/
         //asocio el marcador al mapa
         marcador.setMap(map);
         //añado el marcador a la posicion del mapa correspondiente

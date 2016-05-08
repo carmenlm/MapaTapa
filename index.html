@@ -56,8 +56,8 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12index.html">
-			<form class="form-inline" id="formRestaurante">
+		<div class="col-xs-6">
+			<form class="form-horizontal" id="formRestaurante">
 				<fieldset>
 
 					<!-- Form Name -->
@@ -65,8 +65,8 @@
 
 					<!-- Text input-->
 					<div class="form-group">
-						<label class="col-xs-4 control-label" for="name">Nombre</label>
-						<div class="col-xs-4">
+						<label class="col-xs-2 control-label" for="name">Restaurante</label>
+						<div class="col-xs-10">
 							<input id="name" name="name" placeholder="nombre..." class="form-control input-md"
 							       required="" type="text">
 
@@ -75,8 +75,8 @@
 
 					<!-- Text input-->
 					<div class="form-group">
-						<label class="col-xs-4 control-label" for="phone">Teléfono</label>
-						<div class="col-xs-4">
+						<label class="col-xs-2 control-label" for="phone">Teléfono</label>
+						<div class="col-xs-10">
 							<input id="phone" name="phone" placeholder="telefóno..."
 							       class="form-control input-md" required="" type="text">
 						</div>
@@ -84,8 +84,8 @@
 
 					<!-- Text input-->
 					<div class="form-group">
-						<label class="col-xs-4 control-label" for="email">Email</label>
-						<div class="col-xs-4">
+						<label class="col-xs-2 control-label" for="email">Email</label>
+						<div class="col-xs-10">
 							<input id="email" name="email" placeholder="email..." class="form-control input-md"
 							       required="" type="text">
 
@@ -94,8 +94,8 @@
 
 					<!-- Text input-->
 					<div class="form-group">
-						<label class="col-xs-4 control-label" for="address">Dirección</label>
-						<div class="col-xs-4">
+						<label class="col-xs-2 control-label" for="address">Dirección</label>
+						<div class="col-xs-10">
 							<input id="address" name="address" placeholder="dirección..." class="form-control input-md"
 							       required="" type="text">
 
@@ -115,6 +115,77 @@
 			</form>
 
 		</div>
+
+		<div class="col-xs-6">
+			<form class="form-horizontal" id="formTapa">
+				<fieldset>
+
+					<!-- Form Name -->
+					<legend>ALTA TAPA</legend>
+
+					<!-- Select Basic -->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="numRestaurante">Restaurante</label>
+						<div class="col-xs-10">
+							<select id="numRestaurante" name="numRestaurante" class="form-control">
+								<option value="1">1</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="nameTapa">Tapa</label>
+						<div class="col-xs-10">
+							<input id="nameTapa" name="nameTapa" placeholder="nombre..." class="form-control input-md"
+							       required="" type="text">
+
+						</div>
+					</div>
+					<!--
+
+										&lt;!&ndash; Multiple Radios (inline) &ndash;&gt;
+										<div class="form-group">
+											<label class="col-xs-2 control-label" for="rate">Puntuación</label>
+											<div class="col-xs-10">
+												<label class="radio-inline" for="rate-0">
+													<input name="rate" id="rate-0" value="1" checked="checked" type="radio">
+													1
+												</label>
+												<label class="radio-inline" for="rate-1">
+													<input name="rate" id="rate-1" value="2" type="radio">
+													2
+												</label>
+												<label class="radio-inline" for="rate-2">
+													<input name="rate" id="rate-2" value="3" type="radio">
+													3
+												</label>
+												<label class="radio-inline" for="rate-3">
+													<input name="rate" id="rate-3" value="4" type="radio">
+													4
+												</label>
+												<label class="radio-inline" for="rate-4">
+													<input name="rate" id="rate-4" value="5" type="radio">
+													5
+												</label>
+											</div>
+										</div>
+					-->
+
+					<!-- Button -->
+					<div class="form-group">
+						<label class="col-xs-2 control-label" for="btnTapa"></label>
+						<div class="col-xs-2">
+							<button type="button" id="btnTapa" name="bntTapa" class="btn btn-info">Enviar</button>
+						</div>
+					</div>
+
+				</fieldset>
+			</form>
+
+		</div>
+
+
 	</div>
 
 
@@ -131,8 +202,6 @@
 		</div>
 	</div>
 </div><!-- /.container -->
-
-
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
